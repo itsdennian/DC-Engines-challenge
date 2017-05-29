@@ -2,7 +2,11 @@ import math
 
 
 def isInside(x,y):
-
+	dist = math.pow((x-50),2) + math.pow((y-50),2)
+	if math.sqrt(dist) <= 50:
+		return True
+	else:
+		return False
 
 
 
