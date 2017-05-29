@@ -12,7 +12,20 @@ def angle_sector(perc):
 
 
 def angle_point(x_coord,y_coord):
-	return 10
+	shift = 50
+	x = float(x_coord - shift)
+	y = float(y_coord - shift)
+
+	x1 = float(50 - shift)
+	y1 = float(100 - shift)
+
+	dot_prod = float(x1*x + y1*y)
+
+	mag = math.sqrt(math.pow(x,2) + math.pow(y,2))
+
+	cos = float(dot_prod)/float(mag)
+	return math.degrees(math.cos(cos))
+
 
 def borw(perc, x_coord, y_coord):
 	if (isInside(x_coord,y_coord) and angle_point(x_coord,y_coord) < angle_sector(perc)):
