@@ -22,7 +22,8 @@ def angle_point(x_coord,y_coord):
 	dot_prod = float(x1*x + y1*y)
 
 	mag = math.sqrt(math.pow(x,2) + math.pow(y,2))
-
+	mag = float(mag)*float(50)
+	
 	cos = float(dot_prod)/float(mag)
 	return math.degrees(math.cos(cos))
 
